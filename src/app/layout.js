@@ -1,6 +1,12 @@
+import { Inter } from "@next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Travel App",
@@ -10,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased relative overflow-hidden">
+      <body
+        className={`${inter.className} m-0 p-0 box-border antialiased relative overflow-hidden`}
+      >
         <Navbar />
         {children}
         <Footer />
