@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "../styles/globals.css";
 
 export const metadata = {
@@ -19,9 +19,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} m-0 p-0 box-border relative overflow-hidden`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <main>
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
